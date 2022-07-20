@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+
+/* common style */
+
+body {
+    font-family: 'Inconsolata', monospace;
+    background-color: rgb(33, 33, 131);
+}
+
+
+
+/* first part styles  */
+
+
+
+.first-part {
+    display: flex;
+    background-color: bisque;
+    width: 1370px;
+    justify-content: center;
+    margin-left: 150px;
+    border-radius: 24px;
+
+}
+
+.section-one {
+    padding-right: 80px;
+}
+
+.section-one h2 {
+    font-size: 58px;
+    padding-left: 30px;
+}
+
+.section-one p {
+    font-size: 28px;
+    padding-left: 30px;
+}
+
+
+
+.section-one button {
+    margin: 30px;
+    height: 50px;
+    font-size: 18px;
+    width: 150px;
+}
+
+.section-one button span {
+    color: red;
+}
+
+
+
+.section-two {
+    padding-left: 10px;
+}
+
+
+/* second part styles */
+
+.second-part {
+
+    display: flex;
+    margin-top: 40px;
+
+}
+
+.match-details {
+    display: grid;
+    background-color: bisque;
+    margin-right: 20px;
+    margin-left: 150px;
+    border-radius: 10px;
+}
+
+.details {
+    margin: 15px 15px 15px 15px;
+    height: 50px;
+    width: 150px;
+    border-radius: 10px;
+    background-color: white;
+    border: transparent;
+}
+
+
+
+.match-preview {
+
+    margin-right: 190px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+
+}
+
+.match-content {
+    background-color: white;
+    margin-right: 20px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    padding: 27px 27px 27px 27px;
+    border-radius: 10px;
+}
+
+.icon-match {
+    display: flex;
+
+}
