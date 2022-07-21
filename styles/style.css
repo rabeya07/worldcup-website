@@ -1,35 +1,59 @@
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
 
 /* common style */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
 body {
     font-family: 'Inconsolata', monospace;
-    background-color: rgb(33, 33, 131);
+    background-color: rgb(45, 112, 166);
+    max-width: 100%;
+    margin: 0 auto;
+
 }
 
 
 
 /* first part styles  */
 
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
+}
 
 .first-part {
-    display: flex;
-    background-color: bisque;
-    width: 1370px;
-    justify-content: center;
-    margin-left: 150px;
-    border-radius: 24px;
 
+    background-color: rgb(196, 227, 255);
+    height: 40vh;
+    width: 70%;
+    margin-top: 40px;
+    border-radius: 24px;
+    display: flex;
+    padding-top: 20px;
+
+}
+
+.first-part:hover {
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+    color: rgb(196, 24, 24);
 }
 
 .section-one {
-    padding-right: 80px;
+    height: 100%;
+    width: 50%;
+
 }
 
 .section-one h2 {
-    font-size: 58px;
+    font-size: 52px;
     padding-left: 30px;
+    padding-bottom: 15px;
 }
 
 .section-one p {
@@ -53,7 +77,9 @@ body {
 
 
 .section-two {
-    padding-left: 10px;
+    height: 100%;
+    width: 50%;
+
 }
 
 
@@ -68,7 +94,7 @@ body {
 
 .match-details {
     display: grid;
-    background-color: bisque;
+    background-color: rgb(196, 227, 255);
     margin-left: 150px;
     margin-right: 5px;
     border-radius: 10px;
@@ -78,9 +104,14 @@ body {
     margin: 15px 15px 15px 15px;
     height: 50px;
     width: 150px;
+    font-size: 14px;
     border-radius: 10px;
     background-color: white;
     border: transparent;
+}
+
+.icon-match {
+    margin-top: 40px;
 }
 
 
@@ -109,25 +140,159 @@ body {
 
 }
 
-.footer {
 
-    background-color: bisque;
-    height: 300px;
+/* footer styles */
+
+
+
+.footer {
+    background-color: rgb(196, 227, 255);
+    width: 100%;
+
 }
+
+
 
 .footer-title {
     text-align: center;
-    font-weight: bold;
+    padding-top: 30px;
+    padding-bottom: 60px;
     font-size: 40px;
-    padding-top: 80px;
 }
 
 .footer-text {
+    text-align: center;
     display: flex;
-    padding-left: 440px;
+    justify-content: center;
+    padding-bottom: 40px;
+    font-size: 22px;
+    gap: 2em;
+}
+
+.social-icon {
+    gap: 2em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-bottom: 30px;
 }
 
 
-/* tablet view */
 
-@media only screen and (min-width: 668px) and (max-width : 992px) {}
+/* Mobile view */
+
+@media only screen and (max-width:688px) {
+
+    .first-part {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 90%;
+        align-items: center;
+        justify-content: center;
+        padding-top: 40px;
+    }
+
+    .section-one h2 {
+        font-size: 30px;
+    }
+
+    .section-one p {
+        font-size: 15px;
+    }
+
+    .section-two img {
+        width: 90%;
+        height: 90%;
+    }
+
+    .second-part {
+        display: flex;
+        flex-direction: column;
+        padding-right: 140px;
+
+
+    }
+
+    .second-part-match {
+        background-color: rgb(45, 112, 166);
+        padding-bottom: 80px;
+
+    }
+
+    .match-preview {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        padding-left: 10px;
+    }
+
+
+
+
+
+    .footer {
+        background-color: #fff;
+        width: 100%;
+    }
+
+
+
+    .footer-title {
+        text-align: center;
+        padding-top: 30px;
+        padding-bottom: 40px;
+    }
+
+    .footer-text {
+        text-align: center;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        padding-bottom: 20px;
+
+    }
+
+    .social-icon {
+        gap: 2em;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding-bottom: 30px;
+    }
+}
+
+/* Tablet view */
+
+@media only screen and (min-width:688px) and (max-width:992px) {
+    .first-part {
+
+        width: 80%;
+    }
+
+    .second-part {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .match-details {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 20px;
+        background-color: transparent;
+
+    }
+
+    .match-preview {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+        align-items: center;
+        padding-left: 20px;
+
+    }
+
+    .footer-text {
+        gap: 2rem;
+
+    }
+
+}
